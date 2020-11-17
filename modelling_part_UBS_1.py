@@ -917,11 +917,11 @@ def main():
 
         if st.sidebar.button("Classify", key='classify'):
             st.subheader("Neural Network Ensemble Results: ")
-            train_predictions = pd.read_csv(os.path.join('final_final_train_predictions_2.csv'))
+            train_predictions = pd.read_csv('final_final_train_predictions_2.csv')
             train_predictions_2 = copy.deepcopy(train_predictions)
             train_predictions_2 = train_predictions_2[list(selected_features)]
             
-            test_predictions = pd.read_csv(os.path.join('final_final_test_predictions_2.csv'))
+            test_predictions = pd.read_csv('final_final_test_predictions_2.csv')
             test_predictions_2 = copy.deepcopy(test_predictions)
             test_predictions_2 = test_predictions_2[list(selected_features)]
             
