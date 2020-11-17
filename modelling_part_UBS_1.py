@@ -1093,14 +1093,14 @@ def main():
 
         if st.sidebar.button("Classify with all models", key='classify_2'):
             st.subheader("Neural Network Ensemble Results: ")
-            train_predictions = pd.read_csv(os.path.join('final_final_train_predictions_2.csv'))
+            train_predictions = pd.read_csv('final_final_train_predictions_2.csv')
             train_predictions_3 = copy.deepcopy(train_predictions)
             cols = [col for col in train_predictions_3.columns if col not in ['Company Name', 
                                                 'lat', 'long', 'NeuralNetworkEnsemble', 'NeuralNetworkEnsemble_risk_prob']]
             #df2 = df[cols]
             train_predictions_3 = train_predictions_3[cols]
             
-            test_predictions = pd.read_csv(os.path.join('final_final_test_predictions_2.csv'))
+            test_predictions = pd.read_csv('final_final_test_predictions_2.csv')
             test_predictions_3 = copy.deepcopy(test_predictions)
             cols_2 = [col for col in test_predictions_3.columns if col not in ['Company Name', 
                               'lat', 'long', 'NeuralNetworkEnsemble', 
