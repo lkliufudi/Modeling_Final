@@ -1061,7 +1061,7 @@ def main():
             all_dataset = pd.concat([pd.concat([train_predictions], axis=1), pd.concat([test_predictions], axis=1)])
             current_open_stores = all_dataset[all_dataset['target'] == 1].dropna()
                 
-            risk_prob = 1 - model.predict(current_open_stores[list(selected_features)])
+            risk_prob = 1 - model.predict(current_open_stores[list(selected_features)].values)
             current_open_stores['risk_prob'] = risk_prob
             
             def convert_risk(risk):
@@ -1243,7 +1243,7 @@ def main():
             all_dataset = pd.concat([pd.concat([train_predictions], axis=1), pd.concat([test_predictions], axis=1)])
             current_open_stores = all_dataset[all_dataset['target'] == 1].dropna()
                 
-            risk_prob = 1 - model.predict(current_open_stores[cols_2])
+            risk_prob = 1 - model.predict(current_open_stores[cols_2].values)
             current_open_stores['risk_prob'] = risk_prob
             
             def convert_risk(risk):
