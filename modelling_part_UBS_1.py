@@ -947,8 +947,11 @@ def main():
             loss = history.history['loss']
             val_loss = history.history['val_loss']
                 
-            acc = history.history['accuracy']
-            val_acc = history.history['val_accuracy']
+            acc = history.history['acc']
+            
+    
+            val_acc = history.history['val_acc']
+            
             
             df_loss = pd.DataFrame(data=loss, columns=["loss"])
             df_loss['cat'] = 'training_loss'
@@ -1129,8 +1132,8 @@ def main():
             loss = history.history['loss']
             val_loss = history.history['val_loss']
                 
-            acc = history.history['accuracy']
-            val_acc = history.history['val_accuracy']
+            acc = history.history['acc']
+            val_acc = history.history['val_acc']
             
             df_loss = pd.DataFrame(data=loss, columns=["loss"])
             df_loss['cat'] = 'training_loss'
