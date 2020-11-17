@@ -999,7 +999,7 @@ def main():
             # st.write(model.summary())
             #st.write（plot_model(model)）
             
-            test_NN_prediction_prob = model.predict(test_predictions_2)
+            test_NN_prediction_prob = model.predict(test_predictions_2.values)
             test_NN_prediction =np.where(test_NN_prediction_prob > prob_threshold, 1, 0)
             
             #plt.show()
@@ -1181,7 +1181,7 @@ def main():
             # st.write(model.summary())
             #st.write（plot_model(model)）
             
-            test_NN_prediction_prob = model.predict(test_predictions_3)
+            test_NN_prediction_prob = model.predict(test_predictions_3.values)
             test_NN_prediction =np.where(test_NN_prediction_prob > prob_threshold, 1, 0)
             
             #plt.show()
